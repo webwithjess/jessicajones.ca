@@ -5,13 +5,14 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
     <meta name="viewport" content="width=device-width,initial-scale=1">
     <link rel="stylesheet" type="text/css" href="assets/normalize.css">
-    <link href="https://fonts.googleapis.com/css2?family=Poiret+One&family=Poppins:ital,wght@0,300;1,300&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Poiret+One&family=Poppins:ital,wght@0,300;0,400;0,600;1,300&display=swap" rel="stylesheet">
+
     <link rel="stylesheet" type="text/css" href="assets/styles.css">
     <meta name="author" content="Jessica Jones">
   </head>
   <body>
     <header class="header">
-      <div class="page-width">
+      <div class="page-width page-width--lg">
         <div class="header__row">
           <div>
             <h1 class="logo__h1">jessica jones</h1>
@@ -82,7 +83,7 @@
       </div>
     </header>
     <section class="about">
-      <div class="page-width">
+      <div class="page-width page-width--lg">
         <h3 class="about__title">
           Let's Meet Jess
           <span class="about__title-accent"></span>
@@ -93,7 +94,7 @@
       </div>
     </section>
     <section class="work" id="work">
-      <div class="page-width">
+      <div class="page-width page-width--lg">
         <div class="work__row">
           <div class="work__row__item work__row__item--left">
             <h3 class="work__title">Work</h3>
@@ -123,9 +124,19 @@
       </div>
     </section>
     <section class="contact" id="contact">
-      <div class="page-width--small">
-        <h3 class="contact__title">Get in Touch</h3>
-        <form name="contact" method="POST" data-netlify="true" class="form">
+      <div class="page-width page-width--med">
+        <div class="contact__row">
+          <div class="contact__row--left">
+            <h3 class="contact__title">Get in Touch</h3>
+            <p>Jessica is currently available for remote freelance/contract work.</p>
+          </div>
+          <div class="contact__row--right">
+            <a href="#" class="btn">Contact</a>
+          </div>
+        </div>
+        
+        
+        <!-- <form name="contact" method="POST" data-netlify="true" class="form">
           <div class="grid clearfix">
             <div class="form__field grid--half">
               <label for="name">Name*</label>
@@ -143,11 +154,11 @@
           <div class="form__submit">
             <button type="submit" class="btn">send</button>
           </div>
-        </form>
+        </form> -->
       </div>
     </section>
     <footer class="footer">
-      <div class="page-width">
+      <div class="page-width page-width--lg">
         <div class="footer__row">
           <div>
             <p>&#169; Jessica Jones 2020</p>
