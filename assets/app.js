@@ -1,11 +1,19 @@
 $(document).ready(function(){
+  // animation
+
+  $('[data-title-accent]').addClass('loaded');
+  $('[data-fade-in]').addClass('loaded');
+
   // menu
+
   $('a[data-menu-open]').click(function(event) {
     $('.menu').addClass('open');
+    $('.body').addClass('fixed');
   });
 
   $('a[data-menu-close]').click(function(event) {
     $('.menu').removeClass('open');
+    $('.body').removeClass('fixed');
   });
 
   // work

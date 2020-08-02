@@ -4,10 +4,10 @@
     <meta charset="utf-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
     <meta name="viewport" content="width=device-width,initial-scale=1">
-    <link rel="stylesheet" type="text/css" href="assets/normalize.css">
+    <link rel="stylesheet" type="text/css" href="../assets/normalize.css">
     <link href="https://fonts.googleapis.com/css2?family=Poiret+One&family=Poppins:ital,wght@0,300;0,400;0,600;1,300&display=swap" rel="stylesheet">
 
-    <link rel="stylesheet" type="text/css" href="assets/styles.css">
+    <link rel="stylesheet" type="text/css" href="../assets/styles.css">
     <meta name="author" content="Jessica Jones">
   </head>
   <body>
@@ -84,51 +84,54 @@
         </div>
       </header>
 
-      <section class="about">
-        <div class="page-width page-width--lg">
-          <div class="about__row animated animatedFadeInUp fadeInUp">
-            <h3 class="about__title title-accent" data-title-accent>
-              Let's Meet Jess
-            </h3>
-            <div class="about__text">
-              <p>Jessica Jones is a freelance web developer with 5+ years experience building custom themes on the Shopify Platform.</p>
+      <div class="portfolio-page">
+        <section class="portfolio-page__header">
+          <div class="page-width page-width--lg">
+            <div class="animated fadeIn fadeInUp">
+              <h2 class="portfolio-page__title title-accent" data-title-accent>Portfolio</h2>
             </div>
           </div>
-        </div>
-      </section>
-
-      <section class="work">
-        <div class="page-width page-width--lg">
-          <div class="work__row fadeout" data-fade-in>
-            <div class="work__row__item work__row__item--left">
-              <h3 class="work__title">Work</h3>
-              <div class="work__clients">
-                <ul>
-                  <li>
-                    <a href="https://www.nufs.ca/" data-work data-work-img-url="assets/img_nufs.jpg" data-work-img-caption="'Nufs / Shopify Theme Customizations" class="underline">'Nufs</a>
-                  </li>
-                  <li>
-                    <a href="https://chatters.ca/" data-work data-work-img-url="assets/img_chatters.jpg" data-work-img-caption="Chatters / Custom Shopify Theme" class="underline">Chatters</a>
-                  </li>
-                  <li>
-                    <a href="https://beyoucompany.ca/" data-work data-work-img-url="assets/img_beyou.jpg" data-work-img-caption="Be You Apparel & Co / Shopify Theme Customizations" class="underline">Be You Apparel & Co</a>
-                  </li>
-                  <li class="last">
-                    <a href="http://avenue-road.com/" data-work data-work-img-url="assets/img_avenueroad.jpg" data-work-img-caption="Avenue Road / Custom Shopify Theme" class="underline">Avenue Road</a>
-                  </li>
-                </ul>
+        </section>
+        
+        <section class="portfolio-page__work fadeout" data-fade-in>
+          <div class="page-width page-width--lg">
+            <div class="portfolio-page__row">
+              <div class="portfolio-page__item">
+                <a href="https://www.nufs.ca/" class="portfolio-page__item__link">
+                  <img src="../assets/img_nufs.jpg" alt="'Nufs">
+                  <h3>'Nufs</h3>
+                  <p>Theme Customizations</p>
+                </a>
               </div>
-            </div>
-            <div class="work__row__item work__row__item--right">
-              <div class="work__image" data-work-img style="background-image: url('assets/img_nufs.jpg');">
-                <div data-work-caption class="work__image__caption">'Nufs / Shopify Theme Customizations</div>
+              <div class="portfolio-page__item">
+                <a href="https://chatters.ca/" class="portfolio-page__item__link">
+                  <img src="../assets/img_chatters.jpg" alt="Chatters">
+                  <h3>Chatters</h3>
+                  <p>Custom Theme</p>
+                  <small><em>Built as lead developer @ Demac Media</em></small>
+                </a>
+              </div>
+              <div class="portfolio-page__item last">
+                <a href="https://beyoucompany.ca/" class="portfolio-page__item__link">
+                  <img src="../assets/img_beyou.jpg" alt="Be You Apparel & Co">
+                  <h3>Be You Apparel & Co</h3>
+                  <p>Theme Customizations</p>
+                </a>
+              </div>
+              <div class="portfolio-page__item">
+                <a href="http://avenue-road.com/" class="portfolio-page__item__link">
+                  <img src="../assets/img_avenueroad.jpg" alt="Avenue Road">
+                  <h3>Avenue Road</h3>
+                  <p>Custom Theme</p>
+                  <small><em>Built as team member @ Demac Media</em></small>
+                </a>
               </div>
             </div>
           </div>
-        </div>
-      </section>
-
-      <section class="contact">
+        </section>
+      </div>
+      
+      <section class="contact" id="contact">
         <div class="page-width page-width--med">
           <div class="contact__row">
             <div class="contact__row--left">
@@ -168,5 +171,5 @@
   src="https://code.jquery.com/jquery-3.5.1.js"
   integrity="sha256-QWo7LDvxbWT2tbbQ97B53yJnYU3WhH/C8ycbRAkjPDc="
   crossorigin="anonymous"></script>
-  <script src="assets/app.js"></script>
+  <script src="../assets/app.js"></script>
 </html>

@@ -1,7 +1,27 @@
+/* Global */
+
+html, body {
+  height: 100%;
+}
+
 body {
   font-family: 'Poppins', sans-serif;
   color: #222;
   font-weight: 300;
+}
+
+body.fixed {
+  position: fixed;
+}
+
+body {
+  display: flex;
+  flex-direction: column;
+}
+
+.main {
+  /* sticky footer */
+  flex: 1 0 auto;
 }
 
 h1,
@@ -12,7 +32,7 @@ h3 {
 }
 
 h3 {
-  margin: 0 0 20px 0;
+  
   text-transform: uppercase;
 }
 
@@ -56,6 +76,10 @@ a.underline:active::before {
   right: 0;
 }
 
+img {
+  max-width: 100%;
+}
+
 ul {
   padding: 0;
   margin: 0;
@@ -71,6 +95,67 @@ textarea {
     border-radius: 2px;
     padding: 15px;
 }
+
+.btn {
+  padding: 20px 40px;
+  border: none;
+  font-size: 16px;
+  font-weight: 600;
+  text-transform: uppercase;
+  display: inline-block;
+}
+
+.btn--gradient {
+  background-image: linear-gradient(45deg, #d9a7c7 30%, #fffcdc 100%);
+  color: #222;
+}
+
+.btn--solid {
+  background-color: #222;
+  color: #fff;
+}
+
+.btn:hover {
+  cursor: pointer;
+}
+
+.icon {
+  display: inline-block;
+  width: 24px;
+  margin: 0 5px;
+}
+
+.icon svg {
+  fill: #222;
+}
+
+.title-accent {
+  position: relative;
+  display: inline-block;
+  padding-left: 20px;
+  padding-right: 20px;
+}
+
+.title-accent::before {
+  content: "";
+  position: absolute;
+  bottom: -10px;
+  left: 0;
+  right: 100%;
+  height: 60%;
+  background-image: linear-gradient(45deg, #d9a7c7 30%, #fffcdc 100%);
+  z-index: -1;
+  transition-property: right;
+  transition-duration: 0.4s;
+  transition-timing-function: cubic-bezier(0, 0, 0.58, 1);
+  transition-delay: .6s;
+}
+
+.title-accent.loaded::before {
+  right: 0;
+}
+
+/* Layout */
 
 .page-width {
   padding: 0 20px;
@@ -94,6 +179,48 @@ textarea {
   clear: both;
   display: table;
 }
+
+/* Transitions */
+
+.fadeout {
+  opacity: 0;
+  transition: opacity .4s cubic-bezier(0, 0, 0.58, 1), visibility .4s cubic-bezier(0, 0, 0.58, 1);
+  transition-delay: 1s;
+}
+
+.fadeout.loaded {
+  opacity: 1;
+}
+
+/* Animations */
+
+.animated {
+  animation-duration: 1s;
+  animation-fill-mode: both;
+  animation-delay: .3s;
+}
+
+.fadeIn {
+  opacity: 0
+}
+
+.fadeInUp {
+  opacity: 0;
+  animation-name: fadeInUp;
+}
+
+@keyframes fadeInUp {
+  from {
+    transform: translate3d(0,40px,0);
+  }
+
+  to {
+    transform: translate3d(0,0,0);
+    opacity: 1;
+  }
+}
+
+/* Header */
 
 .logo__h1 {
   font-size: 42px;
@@ -124,6 +251,8 @@ textarea {
   justify-content: space-between;
   align-items: center;
 }
+
+/* Menu */
 
 .menu {
   position: fixed;
@@ -158,6 +287,8 @@ textarea {
   right: 20px;
 }
 
+/* Menu Nav */
+
 .nav {
   margin-bottom: 80px;
 }
@@ -166,6 +297,8 @@ textarea {
   font-size: 32px;
 }
 
+/* About */
+
 .about {
   text-align: center;
   padding: 100px 0 40px;
@@ -173,21 +306,10 @@ textarea {
 
 .about__title {
   font-size: 60px;
-  position: relative;
-  display: inline-block;
-  padding-left: 20px;
-  padding-right: 20px;
+  margin: 0 0 20px 0;
 }
 
-.about__title-accent {
-  position: absolute;
-  bottom: -10px;
-  width: 100%;
-  left:  0;
-  height: 45px;
-  background-image: linear-gradient(45deg, #d9a7c7 30%, #fffcdc 100%);
-  z-index: -1;
-}
+
 
 .about__text {
   max-width: 575px;
@@ -195,17 +317,7 @@ textarea {
   font-size: 30px;
 }
 
-.contact {
-  padding: 60px 0;
-  background-color: #222;
-}
-
-.contact__title {
-  color: #fff;
-  font-size:  36px;
-}
-
-
+/* Work */
 
 .work {
   padding: 100px 0 120px;
@@ -281,6 +393,18 @@ textarea {
   height: 100%;
 }
 
+/* Contact Banner */
+
+.contact {
+  padding: 60px 0;
+  background-color: #222;
+}
+
+.contact__title {
+  color: #fff;
+  font-size:  36px;
+}
+
 .contact p {
   color: #fff;
 }
@@ -299,27 +423,20 @@ textarea {
   margin-bottom: 40px;
 }
 
-.footer {
-  padding: 20px 0;
+/* Contact page */
+
+.contact-page {
+  padding-top: 40px;
+  padding-bottom: 100px;
 }
 
-.footer__row {
-  display: -webkit-flex;
-  display: -moz-flex;
-  display: -ms-flex;
-  display: -o-flex;
-  display: flex;
-  justify-content: space-between;
+.contact-page__title {
+  font-size: 36px;
+  text-transform: uppercase;
 }
 
-.icon {
-  display: inline-block;
-  width: 24px;
-  margin: 0 5px;
-}
-
-.icon svg {
-  fill: #222;
+.form {
+  margin-top: 40px;
 }
 
 .form__field {
@@ -341,27 +458,93 @@ textarea {
   border: 1px solid #ccc;
   font-style: italic;
   font-size: 14px;
-  border-radius: 6px;
 }
 
 .form__submit {
   text-align: center;
 }
 
-.btn {
-  background-image: linear-gradient(45deg, #d9a7c7 30%, #fffcdc 100%);
-  color: #222;
-  padding: 20px 40px;
-  border: none;
-  font-size: 16px;
-  font-weight: 600;
-  text-transform: uppercase;
-  display: inline-block;
+.form__submit .btn {
+  background-image: none;
+  background-color: #222;
+  color: #fff;
 }
 
-.btn:hover {
-  cursor: pointer;
+/* About Page */
+
+.about-page {
+  padding-top: 40px;
+  padding-bottom: 100px;
 }
+
+.about-page__title {
+  font-size: 36px;
+  text-transform: uppercase;
+}
+
+/* Portfolio Page */
+
+.portfolio-page {
+  padding-top: 40px;
+  padding-bottom: 100px;
+}
+
+.portfolio-page__title {
+  font-size: 36px;
+  text-transform: uppercase;
+}
+
+.portfolio-page__work {
+  margin-top: 80px;
+}
+
+.portfolio-page__row {
+  display: -webkit-flex;
+  display: -moz-flex;
+  display: -ms-flex;
+  display: -o-flex;
+  display: flex;
+  flex-direction: column;
+}
+
+.portfolio-page__item {
+  margin-bottom: 40px;
+}
+
+.portfolio-page__item h3 {
+  font-size: 24px;
+}
+
+.portfolio-page__item__link {
+  display: block;
+  transform: translate(0,0);
+  transition: all .2s ease;
+}
+
+.portfolio-page__item__link:hover {
+  transform: translate(4px, 4px);
+}
+
+
+/* Footer */
+
+.footer {
+  padding: 20px 0;
+  flex-shrink: 0; 
+}
+
+.footer__row {
+  display: -webkit-flex;
+  display: -moz-flex;
+  display: -ms-flex;
+  display: -o-flex;
+  display: flex;
+  justify-content: space-between;
+}
+
+
+
+/* Media Queries */
 
 @media (min-width: 769px) {
   .menu__inner {
@@ -420,5 +603,20 @@ textarea {
 
   .work__image {
     display: block;
+  }
+
+  .portfolio-page__row {
+    flex-direction: row;
+    flex-wrap: wrap;
+    /* justify-content: center; */
+  }
+
+  .portfolio-page__item {
+    width: calc(33.33% - 24px);
+     margin-bottom: 60px;
+  }
+
+  .portfolio-page__item:not(.last) {
+    margin-right: 24px;
   }
 }
