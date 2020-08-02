@@ -180,6 +180,14 @@ textarea {
   display: table;
 }
 
+.flex {
+  display: -webkit-flex;
+  display: -moz-flex;
+  display: -ms-flex;
+  display: -o-flex;
+  display: flex;
+}
+
 /* Transitions */
 
 .fadeout {
@@ -242,12 +250,6 @@ textarea {
 }
 
 .header__row {
-  display: -webkit-flex;
-  display: -moz-flex;
-  display: -ms-flex;
-  display: -o-flex;
-  display: flex;
-  flex-direction: row;
   justify-content: space-between;
   align-items: center;
 }
@@ -324,21 +326,11 @@ textarea {
 }
 
 .work__row {
-  display: -webkit-flex;
-  display: -moz-flex;
-  display: -ms-flex;
-  display: -o-flex;
-  display: flex;
   flex-direction: column;
 }
 
 .work__row__item--left {
   flex-grow: 1;
-  display: -webkit-flex;
-  display: -moz-flex;
-  display: -ms-flex;
-  display: -o-flex;
-  display: flex;
   flex-direction: column;
   justify-content: flex-end;
   text-align: center;
@@ -373,14 +365,6 @@ textarea {
   height: 500px;
   margin: 0 auto;
   position: relative;
-
-  display: -webkit-flex;
-  display: -moz-flex;
-  display: -ms-flex;
-  display: -o-flex;
-  display: flex;
-  justify-content: flex-end;
-  align-items: flex-end;
   transition: all 100ms linear;
 
   display: none;
@@ -410,11 +394,6 @@ textarea {
 }
 
 .contact__row {
-  display: -webkit-flex;
-  display: -moz-flex;
-  display: -ms-flex;
-  display: -o-flex;
-  display: flex;
   flex-direction: column;
   text-align: center;
 }
@@ -499,11 +478,6 @@ textarea {
 }
 
 .portfolio-page__row {
-  display: -webkit-flex;
-  display: -moz-flex;
-  display: -ms-flex;
-  display: -o-flex;
-  display: flex;
   flex-direction: column;
 }
 
@@ -534,15 +508,8 @@ textarea {
 }
 
 .footer__row {
-  display: -webkit-flex;
-  display: -moz-flex;
-  display: -ms-flex;
-  display: -o-flex;
-  display: flex;
   justify-content: space-between;
 }
-
-
 
 /* Media Queries */
 
@@ -608,7 +575,6 @@ textarea {
   .portfolio-page__row {
     flex-direction: row;
     flex-wrap: wrap;
-    /* justify-content: center; */
   }
 
   .portfolio-page__item {
